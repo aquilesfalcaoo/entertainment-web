@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
@@ -7,9 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InputComponent implements OnInit{
 
-  @Input() activeFocus: boolean = false;
+  @Input({ required: false }) activeFocus: boolean = false;
   @Input({ required: true }) placeholder: string = "";
-  @Input() control: any;
+  @Input({ required: true }) control!: AbstractControl<string | null, string | null> | null;
 
   constructor() { }
 

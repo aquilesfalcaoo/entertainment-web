@@ -3,12 +3,12 @@
   class="bg-transparent px-5 pb-3 mt-3 pt-2 caret-red focus:focus:border-white border-b-2 border-greyish-blue outline-none text-white placeholder:font-outfit placeholder:font-light placeholder:text-sm placeholder:text-white placeholder:opacity-50 w-full"
   type="text"
   [placeholder]="placeholder"
-  [ngModel]="control.value"
+  [ngModel]="control?.value"
 />
 <input
   *ngIf="!activeFocus"
   class="bg-transparent px-5 pb-3 mt-3 pt-2 caret-red focus:border-b-2 focus:border-greyish-blue focus:outline-none text-white placeholder:font-outfit placeholder:font-light placeholder:text-sm placeholder:text-white placeholder:opacity-50 w-full"
   type="text"
   [placeholder]="placeholder"
-  [ngModel]="control.value"
+  [ngModel]="control?.value"
 />
