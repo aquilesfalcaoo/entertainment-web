@@ -2,18 +2,17 @@ import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
 @Component({
-  selector: 'app-sign-in',
-  templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.css']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
-export class SignInComponent {
+export class RegisterComponent {
   public form = this.formBuilder.group({
     email: [''],
     password: [''],
+    repeatPassword: [''],
   });
 
   constructor(private formBuilder: FormBuilder) {
   }
-
-  ngOnInit() {}
 }

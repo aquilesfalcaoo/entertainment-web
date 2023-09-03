@@ -3,11 +3,8 @@
     <figure class="icon-movie py-12">
       <img src="../../../assets/logo.svg" alt="icon movie" />
     </figure>
-    <form
-      class="card w-[25rem] rounded-3xl bg-semi-dark-blue p-8"
-      [formGroup]="form"
-    >
-      <h1 class="font-outfit font-light text-white text-3xl mb-5">Login</h1>
+    <div class="card w-[25rem] rounded-3xl bg-semi-dark-blue p-8">
+      <h1 class="font-outfit font-light text-white text-3xl mb-5">Sign Up</h1>
       <app-input
         [activeFocus]="true"
         [placeholder]="'Email address'"
@@ -18,19 +15,22 @@
         [placeholder]="'Password'"
         [control]="form.get('password')"
       ></app-input>
-      <app-button [titleButton]="'Login to your account'"></app-button>
+      <app-input
+        [activeFocus]="true"
+        [placeholder]="'Repeat password'"
+        [control]="form.get('repeatPassword')"
+      ></app-input>
+      <app-button [titleButton]="'Create an account'"></app-button>
       <div
         class="sign-up-content flex justify-center items-baseline gap-3 mt-6"
       >
         <small class="font-outfit font-light text-white text-base"
-          >Don’t have an account?</small
+          >Already have an account?</small
         >
-        <a
-          class="font-outfit font-light text-red text-base"
-          routerLink="/signup"
-          >Sign Up</a
+        <a class="font-outfit font-light text-red text-base" routerLink="/"
+          >Login</a
         >
       </div>
-    </form>
+    </div>
   </div>
 </div>
