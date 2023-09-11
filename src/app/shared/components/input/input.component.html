@@ -1,14 +1,26 @@
-<input
-  *ngIf="activeFocus"
-  class="bg-transparent px-5 pb-3 mt-3 pt-2 caret-red focus:focus:border-white border-b-2 border-greyish-blue outline-none text-white placeholder:font-outfit placeholder:font-light placeholder:text-sm placeholder:text-white placeholder:opacity-50 w-full"
-  type="text"
-  [placeholder]="placeholder"
-  [ngModel]="control?.value"
-/>
-<input
-  *ngIf="!activeFocus"
-  class="bg-transparent px-5 pb-3 mt-3 pt-2 caret-red focus:border-b-2 focus:border-greyish-blue focus:outline-none text-white placeholder:font-outfit placeholder:font-light placeholder:text-sm placeholder:text-white placeholder:opacity-50 w-full"
-  type="text"
-  [placeholder]="placeholder"
-  [ngModel]="control?.value"
-/>
+<div class="input-content relative">
+  <input
+    *ngIf="activeFocus"
+    class="bg-transparent px-5 pb-3 mt-3 pt-2 caret-red focus:focus:border-white border-b-2 border-greyish-blue outline-none text-white placeholder:font-outfit placeholder:font-light placeholder:text-sm placeholder:text-white placeholder:opacity-50 w-full"
+    type="text"
+    [placeholder]="placeholder"
+    [ngModel]="control?.value"
+    (ngModelChange)="updateControlValue($event)"
+    [type]="type"
+    (click)="onTouched()"
+  />
+  <input
+    *ngIf="!activeFocus"
+    class="bg-transparent px-5 pb-3 mt-3 pt-2 caret-red focus:border-b-2 focus:border-greyish-blue focus:outline-none text-white placeholder:font-outfit placeholder:font-light placeholder:text-sm placeholder:text-white placeholder:opacity-50 w-full"
+    [placeholder]="placeholder"
+    [ngModel]="control?.value"
+    (ngModelChange)="updateControlValue($event)"
+    [type]="type"
+    (click)="onTouched()"
+  />
+  <ng-container *ngIf="!control?.value && inputFocus">
+    <div class="error-message absolute right-0 top-5">
+      <small class="font-outfit text-red text-sm font-light">Can't be empty</small>
+    </div>
+  </ng-container>
+</div>

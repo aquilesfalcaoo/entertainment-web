@@ -8,13 +8,25 @@ import { AbstractControl } from '@angular/forms';
 })
 export class InputComponent implements OnInit{
 
+  inputFocus = false;
+
   @Input({ required: false }) activeFocus: boolean = false;
+  @Input({ required: true }) type: string = "";
   @Input({ required: true }) placeholder: string = "";
   @Input({ required: true }) control!: AbstractControl<string | null, string | null> | null;
 
   constructor() { }
 
-  ngOnInit() {
-}
+  updateControlValue(newValue: string) {
+    if (this.control) {
+      this.control.setValue(newValue);
+    }
+  }
+
+  ngOnInit() {}
+
+  onTouched() {
+    this.inputFocus = true;
+  }
 
 }
