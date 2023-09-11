@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthenticationService } from 'src/app/core/services/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -7,13 +9,21 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  public form = this.formBuilder.group({
-    email: [''],
-    password: [''],
+  public form = new FormGroup({
+    email: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required]),
   });
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private authenticationService: AuthenticationService, private router: Router) {
+  }
+
+  authenticateUser() {
+    const emailValue = this.form.get('email')?.value ?? '';
+    const passwordValue = this.form.get('password')?.value ?? '';
+
+    this.authenticationService.userLogin(emailValue, passwordValue).subscribe(() => {
+      // this.router.navigateByUrl('home');
+    });
   }
 
   ngOnInit() {

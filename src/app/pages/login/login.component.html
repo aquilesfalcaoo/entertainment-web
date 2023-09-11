@@ -12,13 +12,19 @@
         [activeFocus]="true"
         [placeholder]="'Email address'"
         [control]="form.get('email')"
+        [type]="'text'"
       ></app-input>
       <app-input
         [activeFocus]="true"
         [placeholder]="'Password'"
         [control]="form.get('password')"
+        [type]="'password'"
       ></app-input>
-      <app-button [titleButton]="'Login to your account'"></app-button>
+      <app-button
+        [title]="'Login to your account'"
+        (click)="authenticateUser()"
+        [disabledButton]="form.invalid"
+      ></app-button>
       <div
         class="sign-up-content flex justify-center items-baseline gap-3 mt-6"
       >
