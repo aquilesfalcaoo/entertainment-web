@@ -19,6 +19,26 @@
       "email": "sinval@mail.com",
       "password": "$2a$10$P4PSZoUM74fxRHcBiEr/BeXaCHRtK.fTs4c/XD2c3WGP4/R92anBe",
       "id": 4
+    },
+    {
+      "email": "thiago@mail.com",
+      "password": "$2a$10$wXRkskWfvubiLj3rsvxBYemM2L4gf4fStIoDaMOsrDX3asP7qP0FG",
+      "id": 5
+    },
+    {
+      "email": "thiagola@mail.com",
+      "password": "$2a$10$D2scWD5bGtKXr/3Qy.40t.snkiXGpqZMW0lE0jFEGyc2MEN..f.ca",
+      "id": 6
+    },
+    {
+      "email": "aquiles@gmail.com",
+      "password": "$2a$10$r/X3mMJVN3StMdIu.3Todu7D7DWqQnhTH8CKDDjQeGAGAsSjhPiIK",
+      "id": 7
+    },
+    {
+      "email": "jaozada@gmail.com",
+      "password": "$2a$10$omLN94cZzt1LknRdb3AeTuhd4yvfyFSxXznx8fx57GVIzPJWfUcre",
+      "id": 8
     }
   ]
 }
