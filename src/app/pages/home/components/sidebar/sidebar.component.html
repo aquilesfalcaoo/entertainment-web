@@ -1,17 +1,29 @@
 <aside class="navigation mb-6 mr-6 mt-6">
   <nav class="navbar-nav flex flex-col items-center rounded-2xl p-6">
-    <img class="w-8" src="../../../assets/logo.svg" alt="Logo">
+    <img class="w-8" src="../../../assets/logo.svg" alt="Logo" />
 
     <ul class="list-nav flex flex-col items-center gap-12 mt-20">
-      <li class="nav-item"><img src="../../../assets/icon-nav-home.svg" alt="Home"></li>
-      <li class="nav-item"><img src="../../../assets/icon-nav-movies.svg" alt="Movies"></li>
-      <li class="nav-item"><img src="../../../assets/icon-nav-tv-series.svg" alt="TV Series"></li>
-      <li class="nav-item"><img src="../../../assets/icon-nav-bookmark.svg" alt="Bookmark"></li>
-      <li class="nav-item"><img src="../../../assets/logout.svg" alt="Logout"></li>
+      <li class="nav-item">
+        <img src="../../../assets/icon-nav-home.svg" alt="Home" />
+      </li>
+      <li class="nav-item">
+        <img src="../../../assets/icon-nav-movies.svg" alt="Movies" />
+      </li>
+      <li class="nav-item">
+        <img src="../../../assets/icon-nav-tv-series.svg" alt="TV Series" />
+      </li>
+      <li class="nav-item">
+        <img src="../../../assets/icon-nav-bookmark.svg" alt="Bookmark" />
+      </li>
+      <li class="nav-item" (click)="logout()">
+        <img class="cursor-pointer" src="../../../assets/logout.svg" alt="Logout" />
+      </li>
     </ul>
 
-    <div class="content-profile border-2 border-white rounded-full w-10 h-10 mt-auto">
-      <img class="w-full" src="../../../assets/image-avatar.png" alt="Avatar">
+    <div
+      class="content-profile border-2 border-white rounded-full w-10 h-10 mt-auto"
+    >
+      <img class="w-full" src="../../../assets/image-avatar.png" alt="Avatar" />
     </div>
   </nav>
 </aside>
