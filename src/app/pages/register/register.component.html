@@ -19,14 +19,18 @@
         [placeholder]="'Password'"
         [control]="form.get('password')"
         [type]="'password'"
+        (keyup)="onKeyPressEvent()"
+        [passwordEquals]="isEquals"
       ></app-input>
       <app-input
         [activeFocus]="true"
         [placeholder]="'Repeat password'"
         [control]="form.get('repeatPassword')"
         [type]="'password'"
+        (keyup)="onKeyPressEvent()"
+        [passwordEquals]="isEquals"
       ></app-input>
-      <app-button [title]="'Create an account'" [disabledButton]="form.invalid"></app-button>
+      <app-button [title]="'Create an account'" (click)="createUserAccount()" [disabledButton]="form.invalid || passwordEqualsValidator()"></app-button>
       <div
         class="sign-up-content flex justify-center items-baseline gap-3 mt-6"
       >

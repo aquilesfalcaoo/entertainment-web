@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthenticationService } from 'src/app/core/services/authentication.service';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -14,14 +14,14 @@ export class LoginComponent implements OnInit {
     password: new FormControl('', [Validators.required]),
   });
 
-  constructor(private authenticationService: AuthenticationService, private router: Router) {
+  constructor(private authService: AuthService, private router: Router) {
   }
 
   authenticateUser() {
     const emailValue = this.form.get('email')?.value ?? '';
     const passwordValue = this.form.get('password')?.value ?? '';
 
-    this.authenticationService.userLogin(emailValue, passwordValue).subscribe(() => {
+    this.authService.userLogin(emailValue, passwordValue).subscribe(() => {
       // this.router.navigateByUrl('home');
     });
   }

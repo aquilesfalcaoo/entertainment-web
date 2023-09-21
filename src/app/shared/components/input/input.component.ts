@@ -11,6 +11,7 @@ export class InputComponent implements OnInit{
   inputFocus = false;
 
   @Input({ required: false }) activeFocus: boolean = false;
+  @Input() passwordEquals = true;
   @Input({ required: true }) type: string = "";
   @Input({ required: true }) placeholder: string = "";
   @Input({ required: true }) control!: AbstractControl<string | null, string | null> | null;
