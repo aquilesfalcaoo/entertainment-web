@@ -1,26 +1,10 @@
 
 <main class="main flex items-start gap-6 mx-6">
-  <aside class="navigation mb-6 mr-6 mt-6">
-    <nav class="navbar-nav flex flex-col items-center rounded-2xl p-6">
-      <img class="w-8" src="../../../assets/logo.svg" alt="Logo">
-
-      <ul class="list-nav flex flex-col items-center gap-12 mt-20">
-        <li class="nav-item"><img src="../../../assets/icon-nav-home.svg" alt="Home"></li>
-        <li class="nav-item"><img src="../../../assets/icon-nav-movies.svg" alt="Movies"></li>
-        <li class="nav-item"><img src="../../../assets/icon-nav-tv-series.svg" alt="TV Series"></li>
-        <li class="nav-item"><img src="../../../assets/icon-nav-bookmark.svg" alt="Bookmark"></li>
-        <li class="nav-item"><img src="../../../assets/logout.svg" alt="Logout"></li>
-      </ul>
-
-      <div class="content-profile border-2 border-white rounded-full w-10 h-10 mt-auto">
-        <img class="w-full" src="../../../assets/image-avatar.png" alt="Avatar">
-      </div>
-    </nav>
-  </aside>
+  <app-sidebar></app-sidebar>
   <section class="flex flex-col w-full">
     <div class="flex items-center gap-2 mt-7 w-full">
       <img class="object-contain" src="../../../assets/icon-search.svg" alt="search">
-      <app-input [type] = "'text'" [placeholder] = "'Search for movies or TV series'" [control] = "form.get('email')" [className]="'placeholder:text-2xl w-full'"></app-input>
+      <app-input class="w-full" [type] = "'text'" [placeholder] = "'Search for movies or TV series'" [control] = "form.get('email')" [className]="'text-3xl placeholder:text-3xl w-full'"></app-input>
     </div>
     <div class="container">
       <h1 class="mt-8 mb-6 font-light text-white text-3xl">Trending</h1>

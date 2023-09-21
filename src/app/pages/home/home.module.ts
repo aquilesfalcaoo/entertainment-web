@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { HomeRoutingModule } from './home-routing.module';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   imports: [
@@ -13,6 +14,6 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     SharedModule,
     HomeRoutingModule,
   ],
-  declarations: [HomeComponent, CarouselComponent]
+  declarations: [HomeComponent, CarouselComponent, SidebarComponent]
 })
 export class HomeModule { }
