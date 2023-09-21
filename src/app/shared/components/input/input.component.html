@@ -19,9 +19,18 @@
     [type]="type"
     (click)="onTouched()"
   />
-  <ng-container *ngIf="!control?.value && inputFocus">
+  <ng-container *ngIf="!control?.value && inputFocus && activeFocus">
     <div class="error-message absolute right-0 top-5">
-      <small class="font-outfit text-red text-sm font-light">Can't be empty</small>
+      <small class="font-outfit text-red text-sm font-light"
+        >Can't be empty</small
+      >
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!passwordEquals && control?.value">
+    <div class="error-message absolute right-0 top-5">
+      <small class="font-outfit text-red text-sm font-light"
+        >Passwords don't match</small
+      >
     </div>
   </ng-container>
 </div>
