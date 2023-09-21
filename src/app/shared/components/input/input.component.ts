@@ -15,7 +15,7 @@ export class InputComponent implements OnInit{
   @Input({ required: true }) type: string = "";
   @Input({ required: true }) placeholder: string = "";
   @Input({ required: true }) control!: AbstractControl<string | null, string | null> | null;
-
+  @Input() className: string = "";
   constructor() { }
 
   updateControlValue(newValue: string) {

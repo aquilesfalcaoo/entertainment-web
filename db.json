@@ -39,6 +39,11 @@
       "email": "jaozada@gmail.com",
       "password": "$2a$10$omLN94cZzt1LknRdb3AeTuhd4yvfyFSxXznx8fx57GVIzPJWfUcre",
       "id": 8
+    },
+    {
+      "email": "joao.matheeus1555@gmail.com",
+      "password": "$2a$10$8BzuU7oaPnkRJG.ps6rO9e6zkLcyapc9ZB9lGgMtUgt1pUoZAINtm",
+      "id": 9
     }
   ]
 }
