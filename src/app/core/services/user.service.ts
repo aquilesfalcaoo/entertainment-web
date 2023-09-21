@@ -37,7 +37,7 @@ export class UserService {
     this.userSubject.next(null);
   }
 
-  isLoggedIn(): any {
-    this.tokenService.hasToken();
+  isLoggedIn() {
+    return this.tokenService.hasToken();
   }
 }
