@@ -38,6 +38,6 @@ export class UserService {
   }
 
   isLoggedIn() {
-    this.tokenService.hasToken();
+    return this.tokenService.hasToken();
   }
 }
