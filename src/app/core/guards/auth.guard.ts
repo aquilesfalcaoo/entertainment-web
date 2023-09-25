@@ -2,7 +2,7 @@ import { inject } from "@angular/core";
 import { UserService } from "../services/user.service";
 import { Router } from "@angular/router";
 
-export const authGuard = () => {
+export const AuthGuard = () => {
   const user = inject(UserService);
   const router = inject(Router);
 
